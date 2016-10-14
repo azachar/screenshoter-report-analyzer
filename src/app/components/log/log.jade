@@ -1,0 +1,23 @@
+span(class='{{$ctrl.color}}')
+  strong.text-uppercase {{::$ctrl.log.level}}
+  |  
+  code.highlight 
+    span(ng-bind-html="$ctrl.log.message | uibTypeaheadHighlight:$ctrl.filtering.search")
+  |  
+  small
+    i {{::$ctrl.log.timestamp | date:'shortTime'}}
+  |  
+  a.btn.btn-xs.btn-danger(ng-if='!$ctrl.noToolbar' ng-click='$ctrl.exclude()')
+    i.fa.fa-ban
+    |  
+    span Exclude same
+  a.btn.btn-xs.btn-default(ng-if='$ctrl.log.stack' ng-model="$ctrl.more" uib-btn-checkbox)
+    i.fa.fa-plus
+    |  
+    span show stack
+  div.text-muted(ng-if='$ctrl.more')
+    ul
+      li(ng-repeat='frame in $ctrl.log.stack.callFrames')
+        strong {{::frame.functionName}}
+        |  
+        span {{::frame.url}}@{{frame.lineNumber}}:{{frame.columnNumber}}

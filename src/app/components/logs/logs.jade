@@ -1,0 +1,51 @@
+h3 Total {{$ctrl.logs.length}}  Console {{$ctrl.filtering.logFilter}} logs {{$ctrl.filtering.show}}
+
+div(ng-if='$ctrl.filtering.excludeList.length>0')
+  h4 Duplicated (excluded)
+  ul
+    li(ng-repeat='log in $ctrl.filtering.excludeList')
+      log(model='log' no-toolbar='true')
+  button.btn.btn-defaul(ng-click='$ctrl.filtering.excludeList.length=0') Clear
+
+h4 Console logs
+  |  
+  small.text-info {{::$ctrl.filtering.logFilter}}
+.row
+  .col-md-4
+    .form-group
+      input.form-control(ng-model='$ctrl.filtering.exclude' placeholder='exclude' ng-model-options='{ debounce: 1000 }')
+    .form-group
+      input.form-control(ng-model='$ctrl.filtering.search' placeholder='search' ng-model-options='{ debounce: 1000 }')
+  .col-md-4
+    br
+    br
+    .text-center
+      small
+        dir-pagination-controls
+  .col-md-3
+  .col-md-1
+    .form-group
+      label Results per page
+      input.form-control(ng-model='$ctrl.filtering.perPage' placeholder='results per page' ng-model-options='{ debounce: 1000 }' )
+
+p    
+  hr
+  ul.list-group(dir-paginate='browserAndLogs in $ctrl.logs | itemsPerPage:$ctrl.filtering.perPage')
+    li.list-group-item(class='{{::$ctrl.getColor(log)}}' ng-repeat='log in browserAndLogs.logs |  filter:$ctrl.filtering.search  | filter:{level:$ctrl.filtering.logFilter} | omit:$ctrl.omit()')
+      log(model='log' filtering='$ctrl.filtering')
+      |  
+      span.badge(title='Browser name') {{::browserAndLogs.browser}}
+      | 
+      .btn-group 
+        a.btn.btn-xs.btn-info(ng-model="showEnclosedSpec"  uib-btn-checkbox)  
+          span Show spec
+        //- a.btn.btn-xs.btn-default(ng-model="showEnclosedExpect"  uib-btn-checkbox)  
+        //-   span Show expectation
+      p
+        .well(ng-if='showEnclosedSpec')
+          spec(test='browserAndLogs.test' filtering='$ctrl.filtering')
+          //- expectation(ng-if='showEnclosedExect' model='browserAndLogs.exp' filtering='$ctrl.filtering')
+p
+  hr
+  .text-center
+    dir-pagination-controls

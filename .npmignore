@@ -1,0 +1,7 @@
+e2e
+gulp
+src
+bower.json
+gulpfile.js
+karma.conf.js
+protractor.conf.js

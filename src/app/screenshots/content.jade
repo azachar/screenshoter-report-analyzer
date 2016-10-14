@@ -1,0 +1,7 @@
+.col-md-12(dir-paginate='t in main.data.tests | filter:{status:main.filtering.show} | itemsPerPage: main.filtering.perPage')
+  spec(test='t' filtering='main.filtering')
+.col-md-12
+  p
+    hr
+    .text-center
+      dir-pagination-controls
