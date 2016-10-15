@@ -1,7 +1,7 @@
 {
   "name": "screenshoter-report-analyzer",
   "description": "A beautiful angular based analytics tool to visually check and fix protractor tests results.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dependencies": {},
   "scripts": {
     "test": "gulp test"
@@ -57,5 +57,28 @@
   },
   "engines": {
     "node": ">=0.10.0"
-  }
+  },
+  "files": [
+    "dist/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azachar/screenshoter-report-analyzer.git"
+  },
+  "keywords": [
+    "protractor",
+    "report",
+    "screenshots",
+    "console",
+    "logs",
+    "html",
+    "angular",
+    "analyzer"
+  ],
+  "author": "Andrej Zachar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/azachar/screenshoter-report-analyzer/issues"
+  },
+  "homepage": "https://github.com/azachar/screenshoter-report-analyzer#readme"
 }
