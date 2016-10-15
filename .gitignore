@@ -1,4 +1,7 @@
-node_modules
-bower_components
-dist/maps
-coverage
+node_modules/
+bower_components/
+coverage/
+.sass-cache/
+.idea/
+.tmp/
+dist/maps/
