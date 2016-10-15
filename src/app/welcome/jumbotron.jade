@@ -1,11 +1,37 @@
 .row
   .col-xs-6.col-sm-10.text-left
-    h1 Protractor screeenshot reporter
+    h1 Screeenshoter report analyzer
   .col-xs-6.col-sm-2
     img.img-responsive(src='assets/logo.svg' title='logo created by Vectors Market from the Noun Project')
 p 
-  span.pull-left Total tests 
+  span.pull-left 
+    span Total tests 
+    |  
     strong {{::main.data.tests.length}}
+    |   
+    span.text-success(ng-if='main.data.stat.passed')
+      |  |  
+      span Passed {{::main.data.stat.passed}}
+      |  
+      i.fa.fa-check
+
+    span.text-danger(ng-if='main.data.stat.failed')
+      |  |  
+      span Failed {{::main.data.stat.failed}}
+      |   
+      i.fa.fa-close
+
+    span.text-info(ng-if='main.data.stat.pending')
+      |  |  
+      span Pending {{::main.data.stat.pending}}
+      |   
+      i.fa.fa-pencil
+    span(ng-if='main.data.stat.disabled')
+      |  |  
+      span Disabled {{::main.data.stat.disabled}}
+      |   
+      i.fa.fa-ban
+
   span.pull-right 
     i.fa.fa-clock-o
     |   

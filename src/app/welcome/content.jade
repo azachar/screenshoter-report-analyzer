@@ -1,4 +1,13 @@
 .text-center
-  .btn-group
-    a.btn.btn-info(ui-sref='app.report.screenshots') Screenshots centric
-    a.btn.btn-danger(ui-sref='app.report.console') Console centric
+    h3 {{main.data.ci.name}}  Build Information 
+    .row
+        .col-md-6
+            h5 Number: {{main.data.ci.build}}
+            h5 Branch: {{main.data.ci.branch}}
+        .col-md-6
+            h5 TAG: {{main.data.ci.tag}}
+            h5 SHA: {{main.data.ci.sha}}
+    h3 Reports
+    .btn-group
+        a.btn.btn-info(ui-sref='app.report.screenshots') Screenshots centric
+        a.btn.btn-danger(ui-sref='app.report.console') Console centric
