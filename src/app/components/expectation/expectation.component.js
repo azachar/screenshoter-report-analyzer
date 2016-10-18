@@ -15,14 +15,14 @@ class ExpectationController {
 
   setup($scope, $log) {
     if (this.failed()) {
-      $scope.$watch(() => this.spec.filtering.showFailed, (value) => {
+      $scope.$watch(() => this.spec.showFailed, (value) => {
         this.show = value;
         $log.debug('showFailed = ', value);
       });
     }
 
     if (this.passed()) {
-      $scope.$watch(() => this.spec.filtering.showPassed, (value) => {
+      $scope.$watch(() => this.spec.showPassed, (value) => {
         this.show = value;
         $log.debug('showPassed = ', value);
       });

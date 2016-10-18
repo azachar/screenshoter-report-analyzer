@@ -1,13 +1,24 @@
 class SpecController {
-  constructor($scope) {
+  constructor($scope, $log) {
     'ngInject';
     this.$onInit = () => {
       $scope.$watch(() => this.filtering.expand, (value) => {
         this.expand = value;
       });
+      $scope.$watch(() => this.filtering.expand, (value) => {
+        this.expand = value;
+      });
+      $scope.$watch(() => this.filtering.showFailed, (value) => {
+        this.showFailed = value;
+        $log.debug('showFailed = ', value);
+      });
+
+      $scope.$watch(() => this.filtering.showPassed, (value) => {
+        this.showPassed = value;
+        $log.debug('showPassed = ', value);
+      });
     }
   }
-
 }
 
 
