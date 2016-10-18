@@ -1,7 +1,27 @@
 .container
   div(ui-view='menu')
   .jumbotron
-      div(ui-view='jumbotron')
-      div(ui-view='filtering')
+    div(ui-view='jumbotron')
+    div(ui-view='filtering')
   .row
     div(ui-view='content')
+  .row
+    .col-md-12
+      .text-center.center-block
+        br
+        br
+        br
+        br
+        hr
+        |  
+        a(href='https://github.com/azachar/screenshoter-report-analyzer') Screenshoter Report Analyzer
+        |  
+        span.text-muted  (c) 2016 Andrej Zachar, License MIT.
+        |  
+        span.text-muted Powered by 
+        |  
+        a(href='https://github.com/azachar/protractor-screenshoter-plugin/') protractor-screenshoter-plugin
+        |.
+        br
+        br
+        iframe(src='https://ghbtns.com/github-btn.html?user=azachar&repo=protractor-screenshoter-plugin&type=star&count=true&size=large', frameborder='0', scrolling='0', width='160px', height='30px')
