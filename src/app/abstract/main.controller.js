@@ -14,20 +14,36 @@ export class MainController {
   }
 
   addParentReferences(tests) {
-    for (let test of tests) {
-      for (let exp of test.failedExpectations) {
-        for (let browserAndLogs of exp.logs) {
-          browserAndLogs.test = test;
-          browserAndLogs.exp = exp;
+    if (tests) {
+      for (let i = 0; i < tests.length; i++) {
+        let test = tests[i];
+        if (test.failedExpectations) {
+          for (let j = 0; j < test.failedExpectations.length; j++) {
+            let exp = test.failedExpectations[j];
+            if (exp.logs) {
+              for (let k = 0; k < exp.logs.length; k++) {
+                let browserAndLogs = exp.logs[k];
+                browserAndLogs.test = test;
+                browserAndLogs.exp = exp;
+              }
+            }
+          }
         }
-      }
-      for (let exp of test.passedExpectations) {
-        for (let browserAndLogs of exp.logs) {
-          browserAndLogs.test = test;
-          browserAndLogs.exp = exp;
+        if (test.passedExpectations) {
+          for (let j = 0; j < test.passedExpectations.length; j++) {
+            let exp = test.passedExpectations[j];
+            if (exp.logs) {
+              for (let k = 0; k < exp.logs.length; k++) {
+                let browserAndLogs = exp.logs[k];
+                browserAndLogs.test = test;
+                browserAndLogs.exp = exp;
+              }
+            }
+          }
         }
       }
     }
+    return tests;
   }
 
 

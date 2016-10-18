@@ -16,12 +16,25 @@ class LogsController {
 
   getLogs(tests) {
       let result = [];
-      for (let test of tests) {
-        for (let exp of test.failedExpectations) {
-          result.push(...exp.logs);
-        }
-        for (let exp of test.passedExpectations) {
-          result.push(...exp.logs);
+      if (tests) {
+        for (let i = 0; i < tests.length; i++) {
+          let test = tests[i];
+          if (test.failedExpectations) {
+            for (let j = 0; j < test.failedExpectations.length; j++) {
+              let exp = test.failedExpectations[j];
+              if (exp.logs && exp.logs.length > 0) {
+                result.push(...exp.logs);
+              }
+            }
+          }
+          if (test.passedExpectations) {
+            for (let j = 0; j < test.passedExpectations.length; j++) {
+              let exp = test.passedExpectations[j];
+              if (exp.logs && exp.logs.length > 0) {
+                result.push(...exp.logs);
+              }
+            }
+          }
         }
       }
       return result;
@@ -29,6 +42,9 @@ class LogsController {
     //some log messages contains as a message object
 
   getColor(log) {
+    if (!log || !log.level) {
+      return '';
+    }
     switch (log.level.toUpperCase()) {
       case 'INFO':
         return 'list-group-item-info';
