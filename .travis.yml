@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "node"
+before_script:
+  - npm install -g bower
+  - bower install
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+deploy:
+  provider: npm
+  email: andrej@chocolatejar.eu
+  api_key: $NPM_TOKEN
+  skip_cleanup: true
+  on:
+    tags: true

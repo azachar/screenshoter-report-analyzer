@@ -10,7 +10,7 @@ import { SpecLogsComponent } from '../app/components/spec/logs/spec-logs.compone
 import { LogsComponent } from '../app/components/logs/logs.component';
 import { LogComponent } from '../app/components/log/log.component';
 import { ScreenshotComponent } from '../app/components/screenshot/screenshot.component';
-// import { data } from '../app/components/dev/data.mock';
+// import { data } from '../app/components/dev/data.mock.spec';
 angular.module('reporter', ['ngTouch', 'ngSanitize', 'ui.router', 'ui.bootstrap', 'ngStorage', 'angularUtils.directives.dirPagination', 'angular.filter'])
   .constant('moment', moment)
   // .constant('data', data)
