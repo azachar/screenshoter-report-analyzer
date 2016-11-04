@@ -12,8 +12,19 @@
 [![Coverage Status](https://img.shields.io/codecov/c/github/azachar/screenshoter-report-analyzer.svg?style=flat-square)](http://codecov.io/github/azachar/screenshoter-report-analyzer?branch=master)
 
 # screenshoter-report-analyzer
+
 A tiny beautiful angular based analytics tool to visually represents protractor tests results from
 https://github.com/azachar/protractor-screenshoter-plugin
+
+### Screenshots
+##### Reporter Controls
+![Screenshoter reporter controlls](screenshots/screenshot1.png)
+
+#####  Expanded Spec
+![Screenshoter reporter spec](screenshots/screenshot2.png)
+
+#####  Console log management
+![Screenshoter reporter console](screenshots/screenshot3.png)
 
 
 ## Development
