@@ -31,8 +31,9 @@ https://github.com/azachar/protractor-screenshoter-plugin
 
 #### To run the app
 
-1. Uncomment the debug data in the file  ``index.module.js``
-2. run ``gulp serve``
+``gulp serve``
+
+It comes autimatically with seed data located in ``e2e/seed``
 
 #### To launch tests
 

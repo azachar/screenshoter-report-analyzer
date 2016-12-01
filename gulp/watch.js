@@ -25,6 +25,7 @@ gulp.task('watch', ['scripts:watch', 'markups', 'inject'], function () {
     }
   });
 
+  gulp.watch(path.join(conf.paths.e2e, '/seed/**/*'), ['seed']);
 
   gulp.watch(path.join(conf.paths.src, '/app/**/*.jade'), ['markups']);
 
