@@ -51,7 +51,7 @@
     "lodash": "~3.10.1",
     "main-bower-files": "~2.9.0",
     "ng-annotate-loader": "0.0.10",
-    "phantomjs": "~1.9.18",
+    "phantomjs": "~2.1.7",
     "standard-version": "^3.0.0",
     "uglify-save-license": "~0.4.1",
     "webpack-stream": "~2.1.1",
