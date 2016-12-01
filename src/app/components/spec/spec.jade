@@ -41,9 +41,9 @@
     p.lead {{::$ctrl.test.fullName}}
     .row
       .col-md-12
-        expectations(model='$ctrl.test.passedExpectations' type='passed')
-      .col-md-12
         expectations(model='$ctrl.test.failedExpectations' type='failed')
+      .col-md-12
+        expectations(model='$ctrl.test.passedExpectations' type='passed')
     .row(ng-if='$ctrl.showSpecScreenshots && $ctrl.test.specScreenshots.length > 0')
       .col-md-12(ng-class='{"text-danger": $ctrl.test.status === "failed", "text-success": $ctrl.test.status === "passed"}')
         hr

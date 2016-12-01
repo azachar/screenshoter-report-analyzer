@@ -1,7 +1,7 @@
 div(ng-if='$ctrl.show && $ctrl.model.length > 0')
   h3(ng-if='$ctrl.passed()') Passed Expectations
   h3(ng-if='$ctrl.failed()') Failed Expectations
-  .well(ng-repeat='exp in $ctrl.model')
+  .well(ng-repeat='exp in $ctrl.model | reverse')
     h4(ng-if='$ctrl.passed()').text-success
       i.fa.fa-check
       |  
