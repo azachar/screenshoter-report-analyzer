@@ -49,13 +49,14 @@ export class MainController {
 
   getDefaultConfiguration() {
     return {
-      expand: true,
-      showPassed: true,
+      expand: false,
+      show: 'failed',
+      showPassed: false,
       showFailed: true,
       showStack: false,
       showLogs: true,
       showSpecScreenshots: false,
-      showScreenshots: false,
+      showScreenshots: true,
       perPage: 30,
       excludeList: [],
       logFilter: 'severe'
