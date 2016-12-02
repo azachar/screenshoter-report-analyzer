@@ -35,13 +35,22 @@ div(ng-if='$ctrl.show && $ctrl.model.length > 0')
     speclogs(model='exp.logs')
 
     div(ng-if='exp.stack')
-      button.btn.btn-warning(ng-model="$ctrl.showStack" uib-btn-checkbox) 
-        i.fa.fa-stack-overflow
-        |  
-        span Show protractor stack
+      .row
+        .col-md-4
+          button.btn.btn-warning(ng-model="$ctrl.showStack" uib-btn-checkbox) 
+            i.fa.fa-stack-overflow
+            |  
+            span Show protractor stack
+        .col-md-4(ng-if='$ctrl.showStack')
+          .form-group
+            input.form-control(ng-model='$ctrl.highlight' placeholder='highlight')
+        .col-md-4(ng-if='$ctrl.showStack')
+          .form-group
+            input.form-control(ng-model='$ctrl.exclude' placeholder='exclude')
 
       div(ng-if='$ctrl.showStack')
         p
           h5 Protractor's log:
           pre.text-danger
-            code {{::exp.stack}}
+            code.highlight 
+              span(ng-bind-html="$ctrl.filterStackTraces(exp.stack) | uibTypeaheadHighlight:$ctrl.highlight")
