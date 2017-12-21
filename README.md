@@ -26,6 +26,12 @@ https://github.com/azachar/protractor-screenshoter-plugin
 #####  Console log management
 ![Screenshoter reporter console](screenshots/screenshot3.png)
 
+#####  Stacktrace filtering
+![Screenshoter reporter console](screenshots/screenshot5.png)
+
+Instead of
+
+![Screenshoter reporter console](screenshots/screenshot5b.png)
 
 ## Development
 
