@@ -8,3 +8,5 @@
           small(title='The screenshot was taken on') {{::s.when | date:'mediumTime'}}
       a(href='{{::s.img}}' ng-if='$ctrl.show' target='blank')
        img(ng-src='{{::s.img}}' title='{{::s.when | date:"mediumTime"}}')
+      .text-center(ng-if='$ctrl.htmls[$index].file')
+        a.btn.btn-info(href='{{::$ctrl.htmls[$index].file}}') open HTML

@@ -13,7 +13,8 @@ class ScreenshotController {
 
 export let ScreenshotComponent = {
   bindings: {
-    screenshots: '<model'
+    screenshots: '<model',
+    htmls: '<model2'
   },
   require: {
     spec: '^spec'

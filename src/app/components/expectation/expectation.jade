@@ -30,7 +30,7 @@ div(ng-if='$ctrl.show && $ctrl.model.length > 0')
         i.fa.fa-clock-o
         |  
         strong {{::exp.when | date:'H:mm:ss:sss'}} 
-    screenshots(model='exp.screenshots')
+    screenshots(model='exp.screenshots' model2='exp.htmls')
 
     speclogs(model='exp.logs')
 
