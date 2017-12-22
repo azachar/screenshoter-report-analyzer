@@ -17,7 +17,7 @@ describe('The main view', function() {
     expect(page.stat.failed.getText()).toBe('Failed 3');
     expect(page.stat.pending.getText()).toBe('Pending 2');
     expect(page.stat.disabled.getText()).toBe('Disabled 1');
-    expect(page.stat.generatedOn.getText()).toContain('Dec');
+    expect(page.stat.generatedOn.getText()).toBe('Dec 2, 2016 12:22:21 AM');
   });
 
   it('should display CI board', function() {
