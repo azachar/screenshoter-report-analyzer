@@ -52,6 +52,7 @@
     "main-bower-files": "~2.9.0",
     "ng-annotate-loader": "0.0.10",
     "phantomjs": "~2.1.7",
+    "protractor-screenshoter-plugin": "^0.7.0",
     "standard-version": "^3.0.0",
     "uglify-save-license": "~0.4.1",
     "webpack-stream": "~2.1.1",

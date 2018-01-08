@@ -47,6 +47,10 @@ It comes autimatically with seed data located in ``e2e/seed``
 
 ``gulp protractor`` (E2E tests)
 
+To pause protractor at the place of e2e test failure, set the environmental variable TEST_DEBUG as follow prior the execution of gulp 
+
+``export TEST_DEBUG=true``
+
 #### To make a build
 
 ``gulp build``

@@ -1,9 +1,22 @@
 'use strict';
 
+const CI = process.env.CI;
+const TEST_DEBUG = process.env.TEST_DEBUG;
+
+
 var paths = require('./.yo-rc.json')['generator-gulp-angular'].props.paths;
 
 // An example configuration file.
 exports.config = {
+
+  //self hosting with the latest release
+  plugins: [{
+    package: 'protractor-screenshoter-plugin',
+    screenshotOnSpec: 'none',
+    writeReportFreq: 'spec',
+    pauseOn: TEST_DEBUG && !CI ? 'failure' : 'never'
+  }],
+
   // The address of a running selenium server.
   //seleniumAddress: 'http://localhost:4444/wd/hub',
   //seleniumServerJar: deprecated, this should be set on node_modules/protractor/config.json
