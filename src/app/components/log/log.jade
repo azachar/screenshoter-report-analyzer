@@ -1,7 +1,7 @@
 span(class='{{$ctrl.color}}')
   strong.text-uppercase {{::$ctrl.log.level}}
   |  
-  code.highlight 
+  code.highlight(class='{{$ctrl.color}}')
     span(ng-bind-html="$ctrl.log.message | uibTypeaheadHighlight:$ctrl.filtering.search")
   |  
   small
