@@ -22,9 +22,17 @@ var Stat = function() {
   this.generatedOn = element(by.binding('main.data.generatedOn'));
 };
 
+var ProgressBar = function() {
+  this.passed = element(by.css('div.progress-bar-success'));
+  this.failed = element(by.css('div.progress-bar-danger'));
+  this.pending = element(by.css('div.progress-bar-info'));
+  this.disabled = element(by.css('div.progress-bar-muted'));
+};
+
 var MainPage = function() {
   this.ci = new CI();
   this.stat = new Stat();
+  this.progressBar = new ProgressBar();
 };
 
 module.exports = new MainPage();
