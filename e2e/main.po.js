@@ -5,11 +5,26 @@
 
 'use strict';
 
+var CI = function() {
+  this.buldNumber = element(by.binding('main.data.ci.build'));
+  this.branch = element(by.binding('main.data.ci.branch'));
+  this.tag = element(by.binding('main.data.ci.tag'));
+  this.sha = element(by.binding('main.data.ci.sha'));
+  this.name = element(by.binding('main.data.ci.name'));
+};
+
+var Stat = function() {
+  this.total = element(by.binding('main.data.tests.length'));
+  this.passed = element(by.binding('main.data.stat.passed'));
+  this.failed = element(by.binding('main.data.stat.failed'));
+  this.disabled = element(by.binding('main.data.stat.disabled'));
+  this.pending = element(by.binding('main.data.stat.pending'));
+  this.generatedOn = element(by.binding('main.data.generatedOn'));
+};
+
 var MainPage = function() {
-  this.jumbEl = element(by.css('.jumbotron'));
-  this.h1El = this.jumbEl.element(by.css('h1'));
-  this.imgEl = this.jumbEl.element(by.css('img'));
-  this.thumbnailEls = element(by.css('body')).all(by.repeater('awesomeThing in main.awesomeThings'));
+  this.ci = new CI();
+  this.stat = new Stat();
 };
 
 module.exports = new MainPage();

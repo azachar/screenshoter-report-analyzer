@@ -1,21 +1,29 @@
 'use strict';
 
-describe('The main view', function () {
+var utils = require('./utils');
+
+describe('The main view', function() {
   var page;
 
-  beforeEach(function () {
+  beforeEach(function() {
+    utils.serveMockReport('main.report.json')
     browser.get('/index.html');
     page = require('./main.po');
   });
 
-  it('should include jumbotron with correct data', function() {
-    expect(page.h1El.getText()).toBe('\'Allo, \'Allo!');
-    expect(page.imgEl.getAttribute('src')).toMatch(/assets\/images\/yeoman.png$/);
-    expect(page.imgEl.getAttribute('alt')).toBe('I\'m Yeoman');
+  it('should display statitics header', function() {
+    expect(page.stat.total.getText()).toBe('0'); //due to sample data
+    expect(page.stat.passed.getText()).toBe('Passed 4');
+    expect(page.stat.failed.getText()).toBe('Failed 3');
+    expect(page.stat.pending.getText()).toBe('Pending 2');
+    expect(page.stat.disabled.getText()).toBe('Disabled 1');
+    expect(page.stat.generatedOn.getText()).toContain('Dec');
   });
 
-  it('should list more than 5 awesome things', function () {
-    expect(page.thumbnailEls.count()).toBeGreaterThan(5);
+  it('should display CI board', function() {
+    expect(page.ci.buldNumber.getText()).toBe('Number: 801');
+    expect(page.ci.branch.getText()).toBe('Branch: test-unstable');
+    expect(page.ci.tag.getText()).toBe('TAG: v1.0.0');
+    expect(page.ci.sha.getText()).toBe('SHA: 0217b5a73794860d2d76e7c322386f0a95b5d427');
   });
-
 });

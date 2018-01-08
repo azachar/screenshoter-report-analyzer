@@ -1,0 +1,17 @@
+{
+  "tests": [],
+  "ci": {
+    "build": "801",
+    "branch": "test-unstable",
+    "sha": "0217b5a73794860d2d76e7c322386f0a95b5d427",
+    "tag": "v1.0.0",
+    "name": "My first project"
+  },
+  "stat": {
+    "passed": 4,
+    "failed": 3,
+    "pending": 2,
+    "disabled": 1
+  },
+  "generatedOn": "2016-12-01T23:22:21.798Z"
+}

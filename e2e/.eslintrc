@@ -1,5 +1,7 @@
 {
   "globals": {
+    "require": true,
+    "angular": true,
     "browser": false,
     "element": false,
     "by": false,

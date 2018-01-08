@@ -13,11 +13,14 @@ exports.config = {
     'browserName': 'chrome'
   },
 
+  chromeOnly: true,
+  directConnect: true,
+
   baseUrl: 'http://localhost:3000',
 
   // Spec patterns are relative to the current working directory when
   // protractor is called.
-  specs: [paths.e2e + '/**/*.js'],
+  specs: [paths.e2e + '/**/*.spec.js'],
 
   // Options to be passed to Jasmine-node.
   jasmineNodeOpts: {

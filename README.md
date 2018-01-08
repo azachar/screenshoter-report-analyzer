@@ -43,7 +43,9 @@ It comes autimatically with seed data located in ``e2e/seed``
 
 #### To launch tests
 
-``gulp test``
+``gulp test``  (Unit tests)
+
+``gulp protractor`` (E2E tests)
 
 #### To make a build
 
