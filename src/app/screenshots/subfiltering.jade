@@ -43,6 +43,11 @@ p
         i.fa(ng-class='main.filtering.showLogs ? "fa-toggle-on" : "fa-toggle-off"')
         |  
         span Show browsers logs
+
+      button.btn.btn-xs.btn-info(ng-model="main.filtering.showDumps" uib-btn-checkbox) 
+        i.fa(ng-class='main.filtering.showDumps ? "fa-toggle-on" : "fa-toggle-off"')
+        |  
+        span Show attached dumps
     .btn-group
       button.btn.btn-xs.btn-success(ng-model="main.filtering.logFilter"  ng-disabled='!main.filtering.showLogs' uib-btn-radio="")  
         span All

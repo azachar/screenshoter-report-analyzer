@@ -53,7 +53,8 @@
         screenshots(model='$ctrl.test.specScreenshots' model2='$ctrl.test.specHtmls')
       .col-md-6
         speclogs(model='$ctrl.test.specLogs')
-
+      .col-md-12
+        dump.spec-dump(model='$ctrl.test.specDump')
   .panel-footer(ng-if='$ctrl.expand')
     .row
       .col-md-3

@@ -1,0 +1,13 @@
+div(ng-if='$ctrl.model')
+  p
+    br
+    button.btn.btn-info(ng-model="$ctrl.showDump" uib-btn-checkbox) 
+      i.fa.fa-file-text
+      |  
+      span Show attached dump
+
+    div(ng-if='$ctrl.showDump')
+      p
+        h5 Dump
+        pre.text-info
+          code {{::$ctrl.model}}

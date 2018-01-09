@@ -54,3 +54,5 @@ div(ng-if='$ctrl.show && $ctrl.model.length > 0')
           pre.text-danger
             code.highlight 
               span(ng-bind-html="$ctrl.filterStackTraces(exp.stack) | uibTypeaheadHighlight:$ctrl.highlight")
+
+    dump(model='exp.dump')

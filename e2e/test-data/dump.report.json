@@ -1,0 +1,79 @@
+{
+  "tests": [{
+    "start": "2018-01-08T10:11:03.398Z",
+    "specScreenshots": [{
+      "img": "screenshots/3f8f1640-f45c-11e7-96f0-f5070536b851.png",
+      "browser": "chrome",
+      "when": "2018-01-08T10:11:10.170Z"
+    }],
+    "specLogs": [],
+    "specHtmls": [{
+      "file": "htmls/3fbe3c90-f45c-11e7-96f0-f5070536b851.html",
+      "browser": "chrome",
+      "when": "2018-01-08T10:11:10.217Z"
+    }],
+    "failedExpectations": [{
+      "matcherName": "toEqual",
+      "passed": false,
+      "message": "Expected 'Hello Julie!' to equal 'Hello Martin!'.",
+      "actual": "Hello Julie!",
+      "expected": "Hello Martin!",
+      "error": {},
+      "screenshots": [{
+        "img": "screenshots/3f4f2710-f45c-11e7-96f0-f5070536b851.png",
+        "browser": "chrome",
+        "when": "2018-01-08T10:11:09.788Z"
+      }],
+      "logs": [],
+      "htmls": [{
+        "file": "htmls/3f83cba0-f45c-11e7-96f0-f5070536b851.html",
+        "browser": "chrome",
+        "when": "2018-01-08T10:11:09.848Z"
+      }],
+      "when": "2018-01-08T10:11:09.441Z",
+      "dump": "extra data captured at failed expectation",
+      "stack": "Error: Failed expectation\n    at UserContext.<anonymous> (/Users/azachar/git/github/screenshoter/protractor-screenshoter-plugin/spec/integrational/protractor/angularjs-homepage-simple-failure-test.js:12:32)\n    at /Users/azachar/git/github/screenshoter/protractor-screenshoter-plugin/node_modules/jasminewd2/index.js:112:25\n    at new ManagedPromise (/Users/azachar/git/github/screenshoter/protractor-screenshoter-plugin/node_modules/selenium-webdriver/lib/promise.js:1077:7)\n    at ControlFlow.promise (/Users/azachar/git/github/screenshoter/protractor-screenshoter-plugin/node_modules/selenium-webdriver/lib/promise.js:2505:12)\n    at schedulerExecute (/Users/azachar/git/github/screenshoter/protractor-screenshoter-plugin/node_modules/jasminewd2/index.js:95:18)\n    at TaskQueue.execute_ (/Users/azachar/git/github/screenshoter/protractor-screenshoter-plugin/node_modules/selenium-webdriver/lib/promise.js:3084:14)\n    at TaskQueue.executeNext_ (/Users/azachar/git/github/screenshoter/protractor-screenshoter-plugin/node_modules/selenium-webdriver/lib/promise.js:3067:27)\n    at asyncRun (/Users/azachar/git/github/screenshoter/protractor-screenshoter-plugin/node_modules/selenium-webdriver/lib/promise.js:2974:25)\n    at /Users/azachar/git/github/screenshoter/protractor-screenshoter-plugin/node_modules/selenium-webdriver/lib/promise.js:668:7"
+    }],
+    "passedExpectations": [{
+      "matcherName": "toEqual",
+      "passed": true,
+      "message": "Passed.",
+      "actual": "Hello Julie!",
+      "expected": "Hello Julie!",
+      "error": {},
+      "screenshots": [{
+        "img": "screenshots/3ed56330-f45c-11e7-96f0-f5070536b851.png",
+        "browser": "chrome",
+        "when": "2018-01-08T10:11:09.389Z"
+      }],
+      "logs": [],
+      "htmls": [],
+      "when": "2018-01-08T10:11:08.641Z",
+      "dump": "extra data captured at 1",
+      "stack": ""
+    }],
+    "specDump": "extra data captured at spec done",
+    "end": "2018-01-08T10:11:09.858Z",
+    "diff": 6460,
+    "timeout": 30000,
+    "id": "spec0",
+    "description": "should greet the named user",
+    "fullName": "angularjs homepage should greet the named user",
+    "pendingReason": "",
+    "status": "failed"
+  }],
+  "stat": {
+    "passed": 0,
+    "failed": 1,
+    "pending": 0,
+    "disabled": 0
+  },
+  "ci": {
+    "build": "N/A",
+    "branch": "N/A",
+    "sha": "N/A",
+    "tag": "N/A",
+    "name": "N/A"
+  },
+  "generatedOn": "2018-01-08T10:11:10.874Z"
+}

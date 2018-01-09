@@ -55,6 +55,7 @@ export class MainController {
       showFailed: true,
       showStack: false,
       showLogs: true,
+      showDumps: false,
       showSpecScreenshots: false,
       showScreenshots: true,
       perPage: 30,

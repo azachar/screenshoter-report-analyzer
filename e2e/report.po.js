@@ -5,7 +5,13 @@ var Screenshot = function(parent) {
   this.openHTML = parent.element(by.partialLinkText('Open HTML'));
 };
 
+var Dump = function(parent){
+  this.showDump = parent.element(by.partialButtonText('Show attached dump'));
+  this.content = parent.element(by.binding('$ctrl.model'));
+}
+
 var Expectation = function(parent) {
+  this.dump = new Dump(parent.element(by.css('dump')));
   this.screenshots = parent.all(by.css('screenshots'));
 
   this.getScreenshot = function(index) {
@@ -22,6 +28,7 @@ var Spec = function(parent) {
     var row = this.failedExpectations.get(index);
     return new Expectation(row);
   };
+  this.dump = new Dump(parent.element(by.css('dump.spec-dump')));
 
   this.screenshots = parent.all(by.css('screenshots[model="$ctrl.test.specScreenshots"]'));
 
