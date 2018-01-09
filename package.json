@@ -1,7 +1,7 @@
 {
   "name": "screenshoter-report-analyzer",
   "description": "A beautiful angular based analytics tool to visually check and fix protractor tests results.",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "dependencies": {},
   "scripts": {
     "test": "gulp test",
