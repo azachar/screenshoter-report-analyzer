@@ -4,29 +4,29 @@
   .col-md-10.col-sm-12
     .btn-toolbar
       .btn-group
-        label.btn.btn-primary(ng-model="main.filtering.show" uib-btn-radio="") 
+        button.btn.btn-primary(ng-model="main.filtering.show" uib-btn-radio="") 
           i.fa.fa-bars
           |  
           span All
 
       .btn-group  
-        label.btn.btn-success(ng-if='main.data.stat.passed' ng-model="main.filtering.show" uib-btn-radio="'passed'") 
+        button.btn.btn-success(ng-if='main.data.stat.passed' ng-model="main.filtering.show" uib-btn-radio="'passed'") 
           i.fa.fa-check
           |  
           span Passed ({{::main.data.stat.passed}})
 
-        label.btn.btn-danger(ng-if='main.data.stat.failed' ng-model="main.filtering.show" uib-btn-radio="'failed'")
+        button.btn.btn-danger(ng-if='main.data.stat.failed' ng-model="main.filtering.show" uib-btn-radio="'failed'")
           i.fa.fa-close
           |   
           span Failed ({{::main.data.stat.failed}})
 
 
-        label.btn.btn-info(ng-if='main.data.stat.pending' ng-model="main.filtering.show" uib-btn-radio="'pending'") 
+        button.btn.btn-info(ng-if='main.data.stat.pending' ng-model="main.filtering.show" uib-btn-radio="'pending'") 
           i.fa.fa-pencil
           |   
           span Pending ({{::main.data.stat.pending}})
 
-        label.btn.btn-default(ng-if='main.data.stat.disabled'  ng-model="main.filtering.show" uib-btn-radio="'disabled'") 
+        button.btn.btn-default(ng-if='main.data.stat.disabled'  ng-model="main.filtering.show" uib-btn-radio="'disabled'") 
           i.fa.fa-ban
           |   
           span Disabled ({{::main.data.stat.disabled}})

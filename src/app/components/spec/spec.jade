@@ -19,7 +19,7 @@
         |  
         strong {{::$ctrl.test.passedExpectations.length}}
         |  
-        label.btn.btn-xs.btn-success(ng-model="$ctrl.showPassed" uib-btn-checkbox) 
+        button.btn.btn-xs.btn-success(ng-model="$ctrl.showPassed" uib-btn-checkbox) 
           span Show passed
           |  
           i.fa(ng-class='$ctrl.showPassed ? "fa-toggle-on" : "fa-toggle-off"')
@@ -32,7 +32,7 @@
           |  
           strong {{::$ctrl.test.failedExpectations.length}}
           |  
-          label.btn.btn-xs.btn-danger(ng-model="$ctrl.showFailed" uib-btn-checkbox) 
+          button.btn.btn-xs.btn-danger(ng-model="$ctrl.showFailed" uib-btn-checkbox) 
             span Show failed 
             |  
             i.fa(ng-class='$ctrl.showFailed ? "fa-toggle-on" : "fa-toggle-off"')  
