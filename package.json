@@ -59,7 +59,7 @@
     "wiredep": "~2.2.2"
   },
   "engines": {
-    "node": ">=6.12"
+    "node": ">=6"
   },
   "files": [
     "dist/"
