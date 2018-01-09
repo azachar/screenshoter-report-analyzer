@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.0"></a>
+# [0.5.0](https://github.com/azachar/screenshoter-report-analyzer/compare/v0.4.1...v0.5.0) (2018-01-09)
+
+
+### Features
+
+* **spec:** display dump attachment ([73df7a2](https://github.com/azachar/screenshoter-report-analyzer/commit/73df7a2))
+
+
+
 <a name="0.4.1"></a>
 ## [0.4.1](https://github.com/azachar/screenshoter-report-analyzer/compare/v0.4.0...v0.4.1) (2018-01-09)
 
