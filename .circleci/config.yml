@@ -1,0 +1,47 @@
+version: 2
+jobs:
+  build:
+    working_directory: /home/circleci/screenshoter-report-analyzer
+    docker:
+      - image: azachar/docker-headless:6.12.0-master-b102
+
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - npm-v1-{{ .Branch }}-{{ checksum "package.json" }}
+            - npm-v1-master-{{ checksum "package.json" }}
+
+      - restore_cache:
+          keys:
+            - bower-v1-{{ .Branch }}-{{ checksum "bower.json" }}
+            - bower-v1-master-{{ checksum "bower.json" }}
+
+      - run:
+          name: dependencies
+          command: |
+            bower install &
+            npm install &
+            wait
+            # Speed up build by using existing driver from docker, instead of downloading the latest, which might become incompatible
+            cp -vrf /node_modules/webdriver-manager/selenium /home/circleci/screenshoter-report-analyzer/node_modules/protractor/node_modules/webdriver-manager
+
+      - save_cache:
+          key: npm-v1-{{ .Branch }}-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+
+      - save_cache:
+          key: npm-v1-{{ .Branch }}-{{ checksum "bower.json" }}
+          paths:
+            - bower_components
+
+      - run:
+           name: Tests
+           no_output_timeout: 10m
+           command: |
+              gulp protractor
+
+      - store_artifacts:
+          path: /home/circleci/screenshoter-report-analyzer/REPORTS/e2e
+          destination: live-demo-report

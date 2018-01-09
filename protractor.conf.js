@@ -23,7 +23,24 @@ exports.config = {
 
   // Capabilities to be passed to the webdriver instance.
   capabilities: {
-    'browserName': 'chrome'
+    browserName: 'chrome',
+    chromeOptions: {
+      args: CI ? [
+        '--lang=en-US',
+        '--enable-logging',
+        '--no-sandbox',
+        '--disable-gpu',
+        '--headless'
+      ] : [
+        '--lang=en-US',
+        '--enable-logging',
+        '--no-sandbox',
+        '--disable-gpu'
+      ]
+    },
+    loggingPrefs: {
+      browser: 'ALL' // "OFF", "SEVERE", "WARNING", "INFO", "CONFIG", "FINE", "FINER", "FINEST", "ALL".
+    }
   },
 
   chromeOnly: true,
