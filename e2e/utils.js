@@ -10,6 +10,17 @@ var Utils = function() {
           $provide.constant('data', data);
         }]);
     }, data);
+  };
+
+  this.scrollIntoView = function(el) {
+    return browser.executeScript(function(el) {
+      el.scrollIntoView();
+    }, el.getWebElement());
+  };
+
+  this.clearStorage = function() {
+    browser.executeScript("window.localStorage.clear();");
+    browser.executeScript("window.sessionStorage.clear();");
   }
 }
 
