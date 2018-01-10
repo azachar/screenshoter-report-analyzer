@@ -6,3 +6,4 @@ bower.json
 gulpfile.js
 karma.conf.js
 protractor.conf.js
+dist/maps
