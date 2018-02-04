@@ -6,11 +6,18 @@
 'use strict';
 
 var CI = function() {
-  this.buldNumber = element(by.binding('main.data.ci.build'));
+  this.buildNumber = element(by.binding('main.data.ci.build'));
   this.branch = element(by.binding('main.data.ci.branch'));
   this.tag = element(by.binding('main.data.ci.tag'));
   this.sha = element(by.binding('main.data.ci.sha'));
   this.name = element(by.binding('main.data.ci.name'));
+  this.commit = element(by.binding('main.data.ci.commit'));
+};
+
+var Header = function() {
+  this.commit = element(by.binding('$ctrl.title()'));
+  this.branch = element(by.binding('$ctrl.model.branch'));
+  this.buildNumber = element(by.binding('$ctrl.model.build'));
 };
 
 var Stat = function() {
@@ -31,6 +38,7 @@ var ProgressBar = function() {
 
 var MainPage = function() {
   this.ci = new CI();
+  this.header = new Header();
   this.stat = new Stat();
   this.progressBar = new ProgressBar();
 };

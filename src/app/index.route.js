@@ -29,7 +29,7 @@ export function routerConfig($stateProvider, $urlRouterProvider) {
       abstract: true,
       url: '/report',
       views: {
-        'filtering@app': {
+        'jumbotron@app': {
           templateUrl: 'app/abstract/filtering.html'
         }
       }
@@ -37,9 +37,6 @@ export function routerConfig($stateProvider, $urlRouterProvider) {
     .state('app.report.screenshots', {
       url: '/screenshots',
       views: {
-        'jumbotron@app': {
-          templateUrl: 'app/screenshots/jumbotron.html'
-        },
         'subfiltering': {
           templateUrl: 'app/screenshots/subfiltering.html'
         },
@@ -51,9 +48,6 @@ export function routerConfig($stateProvider, $urlRouterProvider) {
     .state('app.report.console', {
       url: '/console',
       views: {
-        'jumbotron@app': {
-          templateUrl: 'app/console/jumbotron.html'
-        },
         'subfiltering': {
           templateUrl: 'app/console/subfiltering.html'
         },

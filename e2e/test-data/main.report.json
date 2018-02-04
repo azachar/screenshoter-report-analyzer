@@ -5,7 +5,9 @@
     "branch": "test-unstable",
     "sha": "0217b5a73794860d2d76e7c322386f0a95b5d427",
     "tag": "v1.0.0",
-    "name": "My first project"
+    "name": "My first project",
+    "commit": "feat(ui): the great\nline 1\nline 2\nline 3\nline 4",
+    "url": "https://travis-ci.org/azachar/protractor-screenshoter-plugin/builds/337168976"
   },
   "stat": {
     "passed": 4,

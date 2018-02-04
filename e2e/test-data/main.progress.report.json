@@ -1,4 +1,4 @@
-angular.module('reporter').constant('data', {
+{
   "tests": [{
     "start": "2016-12-01T23:22:15.522Z",
     "specScreenshots": [{
@@ -65,13 +65,11 @@ angular.module('reporter').constant('data', {
     "disabled": 0
   },
   "ci": {
-    "build": "123456789",
-    "branch": "feat-super-nice-one",
-    "sha": "98sdlfhasidfhasoifdhasfioashdfoiashdfasoidfs",
-    "tag": "hello-kitty",
-    "name": "Special report name",
-    "commit": "feat(menu): nicer look",
-    "url": "https://travis-ci.org/azachar/protractor-screenshoter-plugin/builds/337168976"
+    "build": "N/A",
+    "branch": "N/A",
+    "sha": "N/A",
+    "tag": "N/A",
+    "name": "N/A"
   },
   "generatedOn": "2016-12-01T23:22:21.798Z"
-});
+}

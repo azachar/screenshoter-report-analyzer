@@ -1,9 +1,11 @@
 'use strict';
+var utils = require('./utils');
 
 describe('The main view', function() {
   var page;
 
   beforeEach(function() {
+    utils.serveMockReport('main.progress.report.json')
     browser.get('/index.html');
     page = require('./main.po');
   });

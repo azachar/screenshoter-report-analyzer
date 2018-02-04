@@ -1,0 +1,22 @@
+div(ng-if='$ctrl.model.build')
+  h2
+    span(title='commit')
+      i.fa.fa-envelope-o
+      | 
+      span {{$ctrl.title() || 'N/A commit message'}}
+    
+  h3  
+      span.pull-left(title='branch')
+        i.fa.fa-leaf
+        | 
+        span {{$ctrl.model.branch || 'N/A branch'}}
+      span.pull-right(title='build')
+        a(ng-href='{{$ctrl.model.url}}')
+          span
+            i.fa.fa-building
+            | 
+            code {{$ctrl.model.build || 'N/A build'}}
+  br
+  hr
+div(ng-if='!$ctrl.model.build')
+  h2 Screenshoter Local Report

@@ -1,0 +1,10 @@
+{
+  "tests": [],
+  "stat": {
+    "passed": 4,
+    "failed": 3,
+    "pending": 2,
+    "disabled": 1
+  },
+  "generatedOn": "2016-12-01T23:22:21.798Z"
+}
