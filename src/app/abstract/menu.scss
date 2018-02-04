@@ -1,0 +1,8 @@
+.navbar-brand > img {
+  max-height: 100%;
+  height: 100%;
+  width: auto;
+  margin: 0 auto;
+  object-fit: contain;
+  padding-right: $padding-base-horizontal;
+}
