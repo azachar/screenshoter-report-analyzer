@@ -38,9 +38,9 @@ jobs:
 
       - run:
            name: Tests
-           no_output_timeout: 10m
+           no_output_timeout: 30m
            command: |
-              gulp protractor
+              gulp protractor:ci
 
       - store_artifacts:
           path: /home/circleci/screenshoter-report-analyzer/REPORTS/e2e
