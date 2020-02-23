@@ -19,7 +19,11 @@ function runProtractor (done) {
 
   gulp.src(path.join(conf.paths.e2e, '/**/*.spec.js'))
     .pipe($.protractor.protractor({
-      configFile: 'protractor.conf.js',
+      configFile: (
+        !process.env.TRAVIS
+        ? 'protractor.conf.js'
+        : 'protractor-headless.conf.js'
+      ),
       args: args
     }))
     .on('error', function (err) {
